@@ -1,0 +1,88 @@
+<html>
+
+<head>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<style>
+
+.container {
+
+    background: url(center_text.png) top left no-repeat;
+      width:864px;
+    height:464px;
+    }
+.left{
+    
+    overflow:hidden;
+       width:50%;
+    height:100%;
+      float:left;
+    //position:relative;
+    
+  
+   shape-outside:polygon(12px 440px, 261px 455px, 261px 315px, 263px 196px, 259px 5px, 2.33px 4.53px);
+
+}
+.right{
+    
+    overflow:hidden;
+       width:50%;
+    height:100%;
+      float:right;
+
+  
+  
+   shape-outside:polygon(72px 470px, 316px 472px, 444px 463px, 439px 247px, 439px 0px, 83px 23px);
+
+}
+
+.content2{
+       width:864px;
+    height:464px;
+font-size:45px;
+ 
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+<div class="container" >            
+    <div class="left">
+    
+    
+    </div>
+     <div class="right">
+    
+    
+    </div>
+     <div class="content2" id='div2' >
+  This is the floating center text. Finally managed to get here.
+  
+  
+    </div>
+ 
+</div>
+
+<script>
+$( document ).ready(function() {
+    console.log( "ready!" );
+    function m1(){
+    $('#div2').html('This is another changing floating text on image. you can change it as many times as you can');
+     setTimeout(m2,2000);
+    }
+    function m2(){
+    $('#div2').html(' This is the floating center text. Finally managed to get here.');
+     setTimeout(m1,2000);
+    }
+    setTimeout(m1,2000);
+});
+</script>
+
+
+</body>
+
+
+</html>
